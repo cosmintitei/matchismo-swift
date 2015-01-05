@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		D832E0141A5ABCE000C9C40C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832E0131A5ABCE000C9C40C /* AppDelegate.swift */; };
-		D832E0161A5ABCE000C9C40C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832E0151A5ABCE000C9C40C /* ViewController.swift */; };
+		D832E0161A5ABCE000C9C40C /* CardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832E0151A5ABCE000C9C40C /* CardGameViewController.swift */; };
 		D832E0191A5ABCE000C9C40C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D832E0171A5ABCE000C9C40C /* Main.storyboard */; };
 		D832E01B1A5ABCE000C9C40C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D832E01A1A5ABCE000C9C40C /* Images.xcassets */; };
 		D832E01E1A5ABCE000C9C40C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D832E01C1A5ABCE000C9C40C /* LaunchScreen.xib */; };
 		D832E02A1A5ABCE000C9C40C /* matchismo_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832E0291A5ABCE000C9C40C /* matchismo_swiftTests.swift */; };
+		D875D5C81A5ACF81000A3B55 /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875D5C71A5ACF81000A3B55 /* card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,14 @@
 		D832E00E1A5ABCE000C9C40C /* matchismo-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "matchismo-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D832E0121A5ABCE000C9C40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D832E0131A5ABCE000C9C40C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D832E0151A5ABCE000C9C40C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D832E0151A5ABCE000C9C40C /* CardGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameViewController.swift; sourceTree = "<group>"; };
 		D832E0181A5ABCE000C9C40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D832E01A1A5ABCE000C9C40C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D832E01D1A5ABCE000C9C40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D832E0231A5ABCE000C9C40C /* matchismo-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "matchismo-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D832E0281A5ABCE000C9C40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D832E0291A5ABCE000C9C40C /* matchismo_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchismo_swiftTests.swift; sourceTree = "<group>"; };
+		D875D5C71A5ACF81000A3B55 /* card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = card.swift; path = Model/card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +79,10 @@
 		D832E0101A5ABCE000C9C40C /* matchismo-swift */ = {
 			isa = PBXGroup;
 			children = (
-				D832E0131A5ABCE000C9C40C /* AppDelegate.swift */,
-				D832E0151A5ABCE000C9C40C /* ViewController.swift */,
+				D832E0151A5ABCE000C9C40C /* CardGameViewController.swift */,
 				D832E0171A5ABCE000C9C40C /* Main.storyboard */,
+				D875D5C91A5ACF8E000A3B55 /* Model */,
 				D832E01A1A5ABCE000C9C40C /* Images.xcassets */,
-				D832E01C1A5ABCE000C9C40C /* LaunchScreen.xib */,
 				D832E0111A5ABCE000C9C40C /* Supporting Files */,
 			);
 			path = "matchismo-swift";
@@ -90,6 +91,8 @@
 		D832E0111A5ABCE000C9C40C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D832E01C1A5ABCE000C9C40C /* LaunchScreen.xib */,
+				D832E0131A5ABCE000C9C40C /* AppDelegate.swift */,
 				D832E0121A5ABCE000C9C40C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +113,14 @@
 				D832E0281A5ABCE000C9C40C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D875D5C91A5ACF8E000A3B55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D875D5C71A5ACF81000A3B55 /* card.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D832E0161A5ABCE000C9C40C /* ViewController.swift in Sources */,
+				D875D5C81A5ACF81000A3B55 /* card.swift in Sources */,
+				D832E0161A5ABCE000C9C40C /* CardGameViewController.swift in Sources */,
 				D832E0141A5ABCE000C9C40C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +417,7 @@
 				D832E02F1A5ABCE000C9C40C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D832E0301A5ABCE000C9C40C /* Build configuration list for PBXNativeTarget "matchismo-swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +426,7 @@
 				D832E0321A5ABCE000C9C40C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
