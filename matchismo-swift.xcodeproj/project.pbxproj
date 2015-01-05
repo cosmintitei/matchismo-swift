@@ -13,7 +13,8 @@
 		D832E01B1A5ABCE000C9C40C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D832E01A1A5ABCE000C9C40C /* Images.xcassets */; };
 		D832E01E1A5ABCE000C9C40C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D832E01C1A5ABCE000C9C40C /* LaunchScreen.xib */; };
 		D832E02A1A5ABCE000C9C40C /* matchismo_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832E0291A5ABCE000C9C40C /* matchismo_swiftTests.swift */; };
-		D875D5C81A5ACF81000A3B55 /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875D5C71A5ACF81000A3B55 /* card.swift */; };
+		D875D5C81A5ACF81000A3B55 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875D5C71A5ACF81000A3B55 /* Card.swift */; };
+		D875D5CB1A5ADCB2000A3B55 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875D5CA1A5ADCB2000A3B55 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,8 @@
 		D832E0231A5ABCE000C9C40C /* matchismo-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "matchismo-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D832E0281A5ABCE000C9C40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D832E0291A5ABCE000C9C40C /* matchismo_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = matchismo_swiftTests.swift; sourceTree = "<group>"; };
-		D875D5C71A5ACF81000A3B55 /* card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = card.swift; path = Model/card.swift; sourceTree = "<group>"; };
+		D875D5C71A5ACF81000A3B55 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Card.swift; path = Model/Card.swift; sourceTree = "<group>"; };
+		D875D5CA1A5ADCB2000A3B55 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Deck.swift; path = Model/Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +120,8 @@
 		D875D5C91A5ACF8E000A3B55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D875D5C71A5ACF81000A3B55 /* card.swift */,
+				D875D5CA1A5ADCB2000A3B55 /* Deck.swift */,
+				D875D5C71A5ACF81000A3B55 /* Card.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -223,7 +226,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D875D5C81A5ACF81000A3B55 /* card.swift in Sources */,
+				D875D5CB1A5ADCB2000A3B55 /* Deck.swift in Sources */,
+				D875D5C81A5ACF81000A3B55 /* Card.swift in Sources */,
 				D832E0161A5ABCE000C9C40C /* CardGameViewController.swift in Sources */,
 				D832E0141A5ABCE000C9C40C /* AppDelegate.swift in Sources */,
 			);
