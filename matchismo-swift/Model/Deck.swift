@@ -11,9 +11,6 @@ import Foundation;
 class Deck{
     lazy var cards: Array<Card> = [];
     
-    init() {
-    }
-    
     func addCard(card: Card, atTop: Bool){
         if atTop {
             cards.insert(card, atIndex: 0)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17D4F6951A5B0E2C006AA9C8 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4F6941A5B0E2C006AA9C8 /* PlayingCard.swift */; };
+		17D4F6971A5B3689006AA9C8 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4F6961A5B3689006AA9C8 /* PlayingCardDeck.swift */; };
 		D832E0141A5ABCE000C9C40C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832E0131A5ABCE000C9C40C /* AppDelegate.swift */; };
 		D832E0161A5ABCE000C9C40C /* CardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D832E0151A5ABCE000C9C40C /* CardGameViewController.swift */; };
 		D832E0191A5ABCE000C9C40C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D832E0171A5ABCE000C9C40C /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17D4F6941A5B0E2C006AA9C8 /* PlayingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayingCard.swift; path = Model/PlayingCard.swift; sourceTree = "<group>"; };
+		17D4F6961A5B3689006AA9C8 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
 		D832E00E1A5ABCE000C9C40C /* matchismo-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "matchismo-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D832E0121A5ABCE000C9C40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D832E0131A5ABCE000C9C40C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 		D875D5C91A5ACF8E000A3B55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				17D4F6961A5B3689006AA9C8 /* PlayingCardDeck.swift */,
+				17D4F6941A5B0E2C006AA9C8 /* PlayingCard.swift */,
 				D875D5CA1A5ADCB2000A3B55 /* Deck.swift */,
 				D875D5C71A5ACF81000A3B55 /* Card.swift */,
 			);
@@ -226,8 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D4F6951A5B0E2C006AA9C8 /* PlayingCard.swift in Sources */,
 				D875D5CB1A5ADCB2000A3B55 /* Deck.swift in Sources */,
 				D875D5C81A5ACF81000A3B55 /* Card.swift in Sources */,
+				17D4F6971A5B3689006AA9C8 /* PlayingCardDeck.swift in Sources */,
 				D832E0161A5ABCE000C9C40C /* CardGameViewController.swift in Sources */,
 				D832E0141A5ABCE000C9C40C /* AppDelegate.swift in Sources */,
 			);
