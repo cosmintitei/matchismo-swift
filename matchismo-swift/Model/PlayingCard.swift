@@ -9,8 +9,8 @@
 import Foundation
 
 class PlayingCard: Card {
-    lazy var suit: String = "?";
-    lazy var rank: Int = 0;
+    var suit: String = "?";
+    var rank: Int = 0;
     
     init(rank: Int, suit: String) {
         super.init()

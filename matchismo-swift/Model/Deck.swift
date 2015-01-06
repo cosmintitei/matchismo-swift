@@ -9,7 +9,7 @@
 import Foundation;
 
 class Deck{
-    lazy var cards: Array<Card> = [];
+    var cards: Array<Card> = [];
     
     func addCard(card: Card, atTop: Bool){
         if atTop {
@@ -27,7 +27,7 @@ class Deck{
         var randomCard: Card!;
         if (self.cards.count > 0) {
             let index: Int = Int(arc4random()) % self.cards.count
-            let randomCard = cards[index];
+            randomCard = cards[index];
             self.cards.removeAtIndex(index)
         }
         return randomCard;

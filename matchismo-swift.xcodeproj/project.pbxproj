@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		17D4F6941A5B0E2C006AA9C8 /* PlayingCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayingCard.swift; path = Model/PlayingCard.swift; sourceTree = "<group>"; };
-		17D4F6961A5B3689006AA9C8 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
+		17D4F6961A5B3689006AA9C8 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayingCardDeck.swift; path = Model/PlayingCardDeck.swift; sourceTree = "<group>"; };
 		D832E00E1A5ABCE000C9C40C /* matchismo-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "matchismo-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D832E0121A5ABCE000C9C40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D832E0131A5ABCE000C9C40C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -360,6 +360,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = "matchismo-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -370,6 +372,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = "matchismo-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
