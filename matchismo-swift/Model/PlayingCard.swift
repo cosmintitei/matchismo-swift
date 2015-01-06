@@ -48,4 +48,16 @@ class PlayingCard: Card {
         return PlayingCard.getRankStrings().count - 1;
     }
     
+    override func match(otherCards: Array<Card>) -> Int {
+        var score = 0
+        if otherCards.count == 1 {
+            var otherCard = otherCards.first
+            if suit == otherCard.suit {
+                score = 1
+            } else if rank == otherCard.rank {
+                score = 4
+            }
+        }
+        return score
+    }
 }

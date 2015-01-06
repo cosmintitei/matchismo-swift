@@ -10,13 +10,15 @@ import UIKit
 
 class CardGameViewController: UIViewController {
     
-    @IBOutlet weak var flipsLabel: UILabel!;
-    var flipsCount = 0;
-    lazy var deck: Deck = PlayingCardDeck();
+    var deck: Deck = PlayingCardDeck();
+    var game: CardMatchingGame?
+    @IBOutlet var cardButtons: [UIButton]!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        game = CardMatchingGame(cardCount: cardButtons.count, deck: deck)
         
     }
 
@@ -26,16 +28,28 @@ class CardGameViewController: UIViewController {
     }
 
     @IBAction func touchCardButton(sender: UIButton) {
-        if (sender.currentTitle != nil && sender.currentTitle != "") {
-            sender.setBackgroundImage(UIImage(named: "cardback"), forState: UIControlState.Normal);
-            sender.setTitle("", forState: UIControlState.Normal);
-        } else {
-            let card = deck.drawRandomCard() as PlayingCard;
-            sender.setBackgroundImage(UIImage(named: "cardfront"), forState: UIControlState.Normal);
-            sender.setTitle(card.getContents(), forState: UIControlState.Normal);
+        let cardIndex = NSArray(array: cardButtons).indexOfObject(sender)
+        println(cardIndex)
+        game?.chooseCard(cardIndex)
+        updateUI()
+    }
+    
+    func updateUI(){
+        for cardButton in cardButtons {
+            let cardIndex = NSArray(array: cardButtons).indexOfObject(cardButton)
+            let card = game?.getCard(cardIndex)
+            cardButton.setTitle(titleForCard(card!), forState: UIControlState.Normal)
+            cardButton.setBackgroundImage(backgroundImageForCard(card), forState: UIControlState.Normal)
+//            cardButton.enabled = !card?.matched
         }
-        self.flipsCount++;
-        self.flipsLabel.text = "Flips: \(self.flipsCount)";
+        scoreLabel.text = "Score: \(game?.score)"
+    }
+    
+    func titleForCard(card: Card) -> String{
+        return card.chosen ? card.contents : ""
     }
 
+    func backgroundImageForCard(card: Card) -> UIImage {
+        return UIImage(named: card.chosen ? "cardfront" : "cardback")
+    }
 }
