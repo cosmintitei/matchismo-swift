@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "matchismo_swift.Deck.drawRandomCard (matchismo_swift.Deck)() -&gt; Swift.ImplicitlyUnwrappedOptional&lt;matchismo_swift.Card&gt;:Deck.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "randomCard">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "matchismo_swift.CardGameViewController.touchCardButton (matchismo_swift.CardGameViewController)(ObjectiveC.UIButton) -&gt; ():CardGameViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "sender.currentTitle">
+            </PersistentString>
+            <PersistentString
+               value = "deck.drawRandomCard()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -12,10 +12,12 @@ class CardGameViewController: UIViewController {
     
     @IBOutlet weak var flipsLabel: UILabel!;
     var flipsCount = 0;
+    lazy var deck: Deck = PlayingCardDeck();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,12 +26,13 @@ class CardGameViewController: UIViewController {
     }
 
     @IBAction func touchCardButton(sender: UIButton) {
-        if (sender.currentTitle != "") {
+        if (sender.currentTitle != nil && sender.currentTitle != "") {
             sender.setBackgroundImage(UIImage(named: "cardback"), forState: UIControlState.Normal);
             sender.setTitle("", forState: UIControlState.Normal);
         } else {
+            let card = deck.drawRandomCard() as PlayingCard;
             sender.setBackgroundImage(UIImage(named: "cardfront"), forState: UIControlState.Normal);
-            sender.setTitle("A♧", forState: UIControlState.Normal);
+            sender.setTitle(card.getContents(), forState: UIControlState.Normal);
         }
         self.flipsCount++;
         self.flipsLabel.text = "Flips: \(self.flipsCount)";

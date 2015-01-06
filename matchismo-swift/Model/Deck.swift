@@ -24,11 +24,11 @@ class Deck{
     }
     
     func drawRandomCard() -> Card! {
-        let index: Int = Int(arc4random()) % self.cards.count
         var randomCard: Card!;
         if (self.cards.count > 0) {
-            var randomCard = cards[index];
-            cards.removeAtIndex(index)
+            let index: Int = Int(arc4random()) % self.cards.count
+            let randomCard = cards[index];
+            self.cards.removeAtIndex(index)
         }
         return randomCard;
     }
