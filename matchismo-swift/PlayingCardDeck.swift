@@ -11,16 +11,12 @@ import Foundation
 class PlayingCardDeck: Deck {
     
     override init() {
-        let suits = PlayingCard.getValidSuits()
-        for suit in [] {
-            for var rank = 1; rank <= PlayingCard.getRankStrings().count; rank++ {
-                var card = PlayingCard(rank, suit)
-            
+        super.init()
+        for suit in PlayingCard.getValidSuits() {
+            for var rank = 1; rank <= PlayingCard.getRankStrings().count - 1; rank++ {
+                self.addCard(PlayingCard(rank: rank, suit: suit))
             }
-//            var card = Card(rank, suit);
-  //          self.addCard(card)
         }
-        
     }
     
 }
