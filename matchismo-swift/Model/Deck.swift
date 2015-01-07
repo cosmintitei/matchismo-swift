@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Cosmin Titei. All rights reserved.
 //
 
-import Foundation;
+import Foundation
 
 class Deck{
-    var cards: Array<Card> = [];
+    var cards: Array<Card> = []
     
     func addCard(card: Card, atTop: Bool){
         if atTop {
@@ -23,14 +23,14 @@ class Deck{
         self.addCard(card, atTop: false);
     }
     
-    func drawRandomCard() -> Card! {
-        var randomCard: Card!;
+    func drawRandomCard() -> Card? {
+        var randomCard: Card?
         if (self.cards.count > 0) {
             let index: Int = Int(arc4random()) % self.cards.count
-            randomCard = cards[index];
+            randomCard = cards[index]
             self.cards.removeAtIndex(index)
         }
-        return randomCard;
+        return randomCard
     }
 
 }

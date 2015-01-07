@@ -9,23 +9,26 @@
 import Foundation
 
 class Card{
-    var contents: String;
-    var chosen: Bool;
-    var matched: Bool;
+    var contents: String {
+        get {
+           return ""
+        }
+    }
+    var chosen: Bool
+    var matched: Bool
     
     init () {
-        self.contents = "";
-        self.chosen = false;
-        self.matched = false;
+        self.chosen = false
+        self.matched = false
     }
     
     func match(otherCards: Array<Card>) -> Int {
-        var score = 0;
+        var score = 0
         for card in otherCards {
             if (card.contents == self.contents) {
-                score = 1;
+                score = 1
             }
         }
-        return score;
+        return score
     }
 }

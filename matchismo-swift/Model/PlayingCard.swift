@@ -9,24 +9,26 @@
 import Foundation
 
 class PlayingCard: Card {
-    var suit: String = "?";
-    var rank: Int = 0;
+    var suit: String = "?"
+    var rank: Int = 0
     
+    override var contents: String {
+        get {
+            let rankStrings = PlayingCard.getRankStrings()
+            return "\(rankStrings[self.rank])\(self.suit)"
+        }
+    };
+
     init(rank: Int, suit: String) {
         super.init()
-        self.setRank(rank);
-        self.setSuit(suit);
+        self.setRank(rank)
+        self.setSuit(suit)
     }
-    
-    func getContents() -> String {
-        let rankStrings = PlayingCard.getRankStrings();
-        return "\(rankStrings[self.rank])\(self.suit)"
-    }
-    
+        
     func setSuit(suit: String) {
-        let validSuits: NSArray = PlayingCard.getValidSuits();
+        let validSuits: NSArray = PlayingCard.getValidSuits()
         if (validSuits.containsObject(suit)) {
-            self.suit = suit;
+            self.suit = suit
         }
     }
     
@@ -40,18 +42,18 @@ class PlayingCard: Card {
     
     func setRank(rank: Int) {
         if (rank <= self.getMaxRank()) {
-            self.rank = rank;
+            self.rank = rank
         }
     }
     
     func getMaxRank() -> Int {
-        return PlayingCard.getRankStrings().count - 1;
+        return PlayingCard.getRankStrings().count - 1
     }
     
     override func match(otherCards: Array<Card>) -> Int {
         var score = 0
         if otherCards.count == 1 {
-            var otherCard = otherCards.first
+            var otherCard = otherCards.first! as PlayingCard
             if suit == otherCard.suit {
                 score = 1
             } else if rank == otherCard.rank {

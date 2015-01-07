@@ -26,7 +26,7 @@ class CardMatchingGame {
             if let card = deck.drawRandomCard() {
                 cards.append(card)
             } else {
-                return nil;
+                return nil
             }
         }
     }
@@ -48,7 +48,7 @@ class CardMatchingGame {
                             } else {
                                 score -= MISMATCH_PENALTY
                             }
-                            break;
+                            break
                         }
                     }
                     score -= COST_OF_CHOOSE

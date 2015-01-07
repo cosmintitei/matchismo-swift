@@ -9,11 +9,12 @@
 import UIKit
 
 class CardGameViewController: UIViewController {
-    
-    var deck: Deck = PlayingCardDeck();
-    var game: CardMatchingGame?
+
     @IBOutlet var cardButtons: [UIButton]!
     @IBOutlet weak var scoreLabel: UILabel!
+
+    var deck: Deck = PlayingCardDeck()
+    var game: CardMatchingGame?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,26 +31,26 @@ class CardGameViewController: UIViewController {
     @IBAction func touchCardButton(sender: UIButton) {
         let cardIndex = NSArray(array: cardButtons).indexOfObject(sender)
         println(cardIndex)
-        game?.chooseCard(cardIndex)
+        game!.chooseCard(cardIndex)
         updateUI()
     }
     
     func updateUI(){
         for cardButton in cardButtons {
             let cardIndex = NSArray(array: cardButtons).indexOfObject(cardButton)
-            let card = game?.getCard(cardIndex)
+            let card = game!.getCard(cardIndex)
             cardButton.setTitle(titleForCard(card!), forState: UIControlState.Normal)
-            cardButton.setBackgroundImage(backgroundImageForCard(card), forState: UIControlState.Normal)
-//            cardButton.enabled = !card?.matched
+            cardButton.setBackgroundImage(backgroundImageForCard(card!), forState: UIControlState.Normal)
+            cardButton.enabled = !card!.matched
         }
-        scoreLabel.text = "Score: \(game?.score)"
+        scoreLabel.text = "Score: \(game!.score)"
     }
     
-    func titleForCard(card: Card) -> String{
+    func titleForCard(card: Card) -> String {
         return card.chosen ? card.contents : ""
     }
 
     func backgroundImageForCard(card: Card) -> UIImage {
-        return UIImage(named: card.chosen ? "cardfront" : "cardback")
+        return UIImage(named: card.chosen ? "cardfront" : "cardback")!
     }
 }
